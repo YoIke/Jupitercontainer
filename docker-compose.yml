@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8888:8888"
+    volumes:
+      - "G:\\マイドライブ\\Colab Notebooks:/data"
+    container_name: jupyter_container
+
+volumes:
+  jupyter_data_volume:
